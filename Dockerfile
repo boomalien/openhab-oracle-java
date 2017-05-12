@@ -1,5 +1,5 @@
 
-FROM openhab/openhab:2.0.0-armhf
+FROM openhab/openhab:2.1.0-snapshot-armhf
 
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list \
         &&  echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list \
