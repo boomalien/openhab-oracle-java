@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y oracle-java8-installer \
         && rm -r /usr/lib/java-8/* \
         && ln -s ln -s /usr/lib/jvm/java-8-oracle/ /usr/lib/java-8 \
         && rm -rf /var/lib/apt/lists/*
+RUN mkdir /var/lib/openhab2/ \
+        && mkdir /var/lib/openhab2/tmp/ \
+        && mkdir /var/lib/openhab2/tmp/bundles \
+        && chown openhab /var/lib/openhab2/ -R
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
